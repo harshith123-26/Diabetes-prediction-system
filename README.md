@@ -31,17 +31,6 @@ Using these features, the system predicts whether a person is likely to have dia
 ✔ Data Preprocessing & Feature Scaling  
 ✔ Structured Project Architecture  
 
----
-
-## 🛠️ Tech Stack
-
-- Python
-- Flask
-- Scikit-learn
-- Pandas
-- NumPy
-- HTML
-- CSS
 
 ---
 
@@ -59,14 +48,16 @@ Diabetes-Prediction-System/
 ├── requirements.txt        # Project dependencies
 └── train_model.py          # Model training script
 ```
-# 3️⃣ Demos
+# 🎥  Demos
 
 <p align="center">
- <img src="static/images/demo.jpeg" width="400"/>
+ <img src="static/images/demo.jpeg" width="300"/>
 </p>
 
 <p align="center">
-https://github.com/user-attachments/assets/722aaae5-ae0a-46d6-877a-03dd4173233d
+ 
+ https://github.com/user-attachments/assets/722aaae5-ae0a-46d6-877a-03dd4173233d
+ 
 </p>
 
 
@@ -155,7 +146,30 @@ Reason for selection:
 
 ---
 
-  
+## 🛠️ Tech Stack
+
+- Python
+- Flask
+- Scikit-learn
+- Pandas
+- NumPy
+- HTML
+- CSS
+
+---
+
+
+## 🏁 Conclusion
+
+The Diabetes Prediction System demonstrates how Machine Learning can be effectively applied in the healthcare domain for early disease detection. 
+
+By integrating data preprocessing, feature scaling, and a Random Forest classification model into a Flask-based web application, this project provides real-time diabetes risk prediction with probability scoring.
+
+The system highlights the practical implementation of an end-to-end ML workflow from dataset handling and model training to deployment making it a strong example of applied machine learning in a real-world scenario.
+
+This project can be further enhanced by integrating additional models, expanding to multi-disease prediction, and deploying on cloud platforms for public access.
+
+---  
 
 
 
