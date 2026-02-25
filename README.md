@@ -65,9 +65,7 @@ Diabetes-Prediction-System/
  <img src="static/images/demo.jpeg" width="400"/>
 </p>
 
-<p align="center">
-static/images/Diabetes predection Demo video (2).mp4
-</p>
+
 
 
 ---
