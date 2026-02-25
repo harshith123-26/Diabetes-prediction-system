@@ -65,7 +65,7 @@ Fusion RAG Doc Chat operates like an intelligent research assistant that
 retrieves and verifies information before generating responses.
 
 <p align="center">
- <img src="assets/demo.png" width="600"/>
+ <img src="assets/demo.jpeg" width="600"/>
 </p>
 
 
