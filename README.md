@@ -67,7 +67,7 @@ Diabetes-Prediction-System/
 ### 1️⃣ Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/diabetes-prediction-system.git
+git clone https://github.com/harshith123-26/Diabetes-prediction-system.git
 cd diabetes-prediction-system
 ```
 
