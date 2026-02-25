@@ -49,6 +49,7 @@ Diabetes-Prediction-System/
 └── train_model.py          # Model training script
 ```
 # 🎥  Demos
+Diabetes Prediction System operates as an intelligent healthcare assistant that analyzes medical parameters and predicts diabetes risk using machine learning algorithms.
 
 <p align="center">
  <img src="static/images/demo.jpeg" width="300"/>
