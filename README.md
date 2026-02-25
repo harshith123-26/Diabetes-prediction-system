@@ -66,10 +66,8 @@ Diabetes-Prediction-System/
 </p>
 
 <p align="center">
-<video width="400" controls>
-<source src="static/images/Diabetes_prediction_Demo_video"
-type="video/mp4">
-</video>
+https://github.com/user-attachments/assets/722aaae5-ae0a-46d6-877a-03dd4173233d
+</p>
 
 
 
