@@ -65,11 +65,16 @@ Diabetes-Prediction-System/
  <img src="static/images/demo.jpeg" width="400"/>
 </p>
 
+<p align="center">
+<video width="400" controls>
+<source src="static/images/Diabetes_prediction_Demo_video"
+type="video/mp4">
+</video>
+
 
 
 
 ---
-
 ## ⚙️ Installation & Setup
 
 ### 1️⃣ Clone the Repository
