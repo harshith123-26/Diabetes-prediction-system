@@ -61,11 +61,12 @@ Diabetes-Prediction-System/
 ```
 # 3️⃣ Demos
 
-Fusion RAG Doc Chat operates like an intelligent research assistant that
-retrieves and verifies information before generating responses.
-
 <p align="center">
  <img src="static/images/demo.jpeg" width="400"/>
+</p>
+
+<p align="center">
+static/images/Diabetes predection Demo video (2).mp4
 </p>
 
 
