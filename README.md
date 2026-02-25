@@ -59,6 +59,15 @@ Diabetes-Prediction-System/
 ├── requirements.txt        # Project dependencies
 └── train_model.py          # Model training script
 ```
+# 3️⃣ Demos
+
+Fusion RAG Doc Chat operates like an intelligent research assistant that
+retrieves and verifies information before generating responses.
+
+<p align="center">
+ <img src="assets/demo.png" width="600"/>
+</p>
+
 
 ---
 
