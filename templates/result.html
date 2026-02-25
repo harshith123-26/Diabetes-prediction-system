@@ -1,0 +1,142 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="result-container">
+
+    <!-- LEFT SIDE -->
+    <div class="left card {{ color }}" style="text-align:center;">
+
+        <h2>{{ risk }}</h2>
+        <h1>{{ probability }}%</h1>
+
+        <!-- SMALL CENTERED GAUGE -->
+        <div style="width:260px; margin:20px auto;">
+            <canvas id="gaugeChart"></canvas>
+        </div>
+
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="right card">
+
+        {% if risk == "Low Risk" %}
+
+            <h3>Clinical Explanation</h3>
+            <p>Your metabolic indicators are within safe range. Current probability suggests minimal diabetic risk.</p>
+
+            <h3>Recommendations</h3>
+            <ul>
+                <li>Maintain balanced diet</li>
+                <li>Continue regular physical activity</li>
+                <li>Annual health checkup</li>
+            </ul>
+
+        {% elif risk == "Moderate Risk" %}
+
+            <h3>Clinical Explanation</h3>
+            <p>Some metabolic indicators show early risk patterns. Preventive lifestyle modification is recommended.</p>
+
+            <h3>Recommendations</h3>
+            <ul>
+                <li>Reduce sugar intake immediately</li>
+                <li>Exercise 30 minutes daily</li>
+                <li>Monitor fasting glucose monthly</li>
+            </ul>
+
+        {% else %}
+
+            <h3>Clinical Explanation</h3>
+            <p>Multiple metabolic indicators strongly correlate with diabetic probability. Medical evaluation is advised.</p>
+
+            <h3>Recommendations</h3>
+            <ul>
+                <li>Consult endocrinologist immediately</li>
+                <li>Get HbA1c test done</li>
+                <li>Strict low-carb diet plan</li>
+                <li>Daily glucose monitoring</li>
+            </ul>
+
+        {% endif %}
+
+        <h3>Contributing Factors</h3>
+        <canvas id="impactChart"></canvas>
+
+    </div>
+</div>
+
+
+
+<!-- BOTTOM SECTION -->
+<div class="card">
+
+    <h3>Diet Plan</h3>
+    <ul>
+        {% for item in diet_plan %}
+            <li>{{ item }}</li>
+        {% endfor %}
+    </ul>
+
+    <h3>Exercise Plan</h3>
+    <ul>
+        {% for item in exercise_plan %}
+            <li>{{ item }}</li>
+        {% endfor %}
+    </ul>
+
+    <br>
+    <a href="{{ url_for('download_report') }}">
+        <button class="btn-primary">Download Report</button>
+    </a>
+
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+const probability = {{ probability }};
+
+/* ---------------- IMPACT BAR CHART ---------------- */
+new Chart(document.getElementById("impactChart"), {
+    type: 'bar',
+    data: {
+        labels: [{% for f in features %}"{{f[0]}}",{% endfor %}],
+        datasets: [{
+            data: [{% for f in features %}{{f[1]}},{% endfor %}],
+            backgroundColor: "#3b82f6"
+        }]
+    },
+    options: {
+        responsive: true,
+        plugins: { legend: { display: false } }
+    }
+});
+
+
+/* ---------------- SMALL CENTERED GAUGE ---------------- */
+new Chart(document.getElementById("gaugeChart"), {
+    type: 'doughnut',
+    data: {
+        datasets: [{
+            data: [probability, 100 - probability],
+            backgroundColor: [
+                "#ff0000",   // 🔴 Risk portion
+                "#007bff"    // 🔵 Remaining portion
+            ],
+            borderWidth: 0
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: true,
+        cutout: "75%",   // makes it thin like gauge
+        plugins: {
+            tooltip: { enabled: false },
+            legend: { display: false }
+        }
+    }
+});
+</script>
+
+{% endblock %}

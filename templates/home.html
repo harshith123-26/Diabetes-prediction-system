@@ -1,0 +1,120 @@
+{% extends "base.html" %}
+{% block content %}
+
+<style>
+body {
+    background: url("{{ url_for('static', filename='images/bg.jpeg') }}") no-repeat center center fixed;
+    background-size: cover;
+}
+
+.home-overlay {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 32px;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.hero-text {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.button-group {
+    margin-bottom: 40px;
+}
+
+.btn-custom {
+    width: 220px;
+    padding: 12px;
+    margin: 10px;
+    border-radius: 6px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-clinical {
+    background: #1abc9c;
+    color: white;
+}
+
+.btn-symptom {
+    background: #3498db;
+    color: white;
+}
+
+.btn-custom:hover {
+    transform: scale(1.05);
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.feature-box {
+    width: 230px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 10px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+}
+</style>
+
+<div class="home-overlay">
+
+    <h1 class="hero-title">Smart Diabetes Screening System</h1>
+
+    <p class="hero-text">
+        AI-powered web application for early diabetes risk detection.
+        Analyze clinical data or symptoms and receive instant risk prediction,
+        feature impact analysis, and personalized diet & exercise recommendations.
+    </p>
+
+    <div class="button-group">
+
+        <a href="{{ url_for('symptom') }}">
+            <button class="btn-custom btn-symptom">
+                Start Symptom Screening
+            </button>
+        </a>
+
+        <a href="{{ url_for('screening') }}">
+            <button class="btn-custom btn-clinical">
+                Start Clinical Screening
+            </button>
+        </a>
+        
+    </div>
+
+    <div class="features">
+        <div class="feature-box">
+            <h3>Machine Learning</h3>
+            <p>Random Forest model trained on medical dataset for accurate prediction.</p>
+        </div>
+
+        <div class="feature-box">
+            <h3>Explainable AI</h3>
+            <p>Feature impact graph to understand key contributing health factors.</p>
+        </div>
+
+        <div class="feature-box">
+            <h3>Personalized Report</h3>
+            <p>Download professional PDF including risk level and recommendations.</p>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

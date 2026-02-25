@@ -1,0 +1,170 @@
+/* ================= BODY ================= */
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: url("../images/bg.jpg") no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+}
+
+/* Light overlay (less dark, more visible background) */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);  /* Less dark overlay */
+    z-index: -1;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+
+    background: rgba(255, 255, 255, 0.06); /* More transparent */
+    backdrop-filter: blur(20px);          /* Strong blur */
+    -webkit-backdrop-filter: blur(20px);
+
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: #06b6d4;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+    text-align: center;
+    padding: 120px 20px;
+    min-height: 90vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(255, 255, 255, 0.05); /* VERY transparent */
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+
+    margin: 60px auto;
+    width: 85%;
+    border-radius: 30px;
+
+    border: 1px solid rgba(255,255,255,0.15);
+
+    box-shadow: 0 8px 32px rgba(0,0,0,0.35);
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    opacity: 0.95;
+    margin-bottom: 40px;
+    max-width: 700px;
+}
+
+/* ================= BUTTON ================= */
+
+.btn-primary {
+    padding: 15px 40px;
+    background: linear-gradient(45deg,#06b6d4,#3b82f6);
+    border-radius: 30px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.btn-primary:hover {
+    transform: scale(1.07);
+    box-shadow: 0 5px 25px rgba(59,130,246,0.6);
+}
+
+/* ================= CARD ================= */
+
+.card {
+    background: rgba(255,255,255,0.05);  /* More transparent */
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    border-radius: 25px;
+    padding: 30px;
+    margin: 40px auto;
+    width: 85%;
+
+    border: 1px solid rgba(255,255,255,0.12);
+
+    box-shadow: 0 8px 32px rgba(0,0,0,0.35);
+}
+
+/* ================= RISK COLORS ================= */
+
+.green { 
+    border-left: 8px solid #22c55e; 
+}
+
+.yellow { 
+    border-left: 8px solid #f59e0b; 
+}
+
+.red { 
+    border-left: 8px solid #ef4444; 
+}
+
+/* ================= RESULT LAYOUT ================= */
+
+.result-container {
+    display: flex;
+    width: 90%;
+    margin: 50px auto;
+    gap: 40px;
+}
+
+.left, .right {
+    flex: 1;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width: 900px){
+
+    .result-container {
+        flex-direction: column;
+    }
+
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero {
+        padding: 60px 15px;
+        width: 95%;
+    }
+}

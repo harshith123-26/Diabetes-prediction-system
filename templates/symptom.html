@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="card">
+    <h2 style="text-align:center; margin-bottom:20px;">
+        Symptom-Based Screening
+    </h2>
+
+    <form method="POST" action="/predict_symptom">
+
+        <label>
+            <input type="checkbox" name="frequent_urination" value="yes">
+            Frequent Urination
+        </label><br><br>
+
+        <label>
+            <input type="checkbox" name="fatigue" value="yes">
+            Fatigue
+        </label><br><br>
+
+        <label>
+            <input type="checkbox" name="blurred_vision" value="yes">
+            Blurred Vision
+        </label><br><br>
+
+        <label>
+            <input type="checkbox" name="excess_thirst" value="yes">
+            Excessive Thirst
+        </label><br><br>
+
+        <label>
+            <input type="checkbox" name="weight_loss" value="yes">
+            Unexplained Weight Loss
+        </label><br><br>
+
+        <button type="submit" class="btn-primary">
+            Check Risk
+        </button>
+
+    </form>
+</div>
+
+{% endblock %}
