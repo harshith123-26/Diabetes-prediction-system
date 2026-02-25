@@ -144,19 +144,8 @@ Reason for selection:
 
 ---
 
-## 👨‍💻 Author
+  
 
-Final Year B.Tech Student  
-Machine Learning & Data Analytics Enthusiast  
 
----
 
-## 📄 License
 
-This project is for educational purposes only.
-
----
-
-## ⭐ If you like this project
-
-Give it a ⭐ on GitHub!
